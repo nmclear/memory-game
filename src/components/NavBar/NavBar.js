@@ -5,7 +5,7 @@ import Status from "../Status"
 
 const NavBar = () => (
 
-    <nav className="navbar navbar-light bg-light">
+    <nav className="nav navbar navbar-light bg-light">
         <div className="container">
             <div className="row">
                 <div className="col-sm-4">
