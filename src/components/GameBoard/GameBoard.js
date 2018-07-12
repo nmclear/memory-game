@@ -4,19 +4,26 @@ import characters from "./../../characters.json";
 import "./gameBoard.css";
 
 
-// const GameBoard = props => (
-//   <div className="board container">
-//     <div className="row">
-//       {props.children}
-//     </div>
-//   </div>
-// );
-
 class GameBoard extends React.Component {
 
   state = {
-    characters
+    characters,
+    default: false
   };
+
+  checkGuess = guessed => {
+    if(guessed){
+      console.log('gameOver');
+      this.props.wrong();
+      // this.setState({ default: false});
+    } else {
+      console.log('correct')
+      this.props.correct();
+    }
+  }
+
+
+
 
   render(){
     return(
@@ -24,10 +31,12 @@ class GameBoard extends React.Component {
         <div className="row">
           {this.state.characters.map(character => (
             <GameCard
+              guessed= {this.state.default}
               id={character.id}
               key={character.id}
               name={character.name}
               image={character.image}
+              checkGuess={this.checkGuess}
             />
           ))}
         </div>

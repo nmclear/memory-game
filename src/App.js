@@ -8,16 +8,61 @@ import Footer from "./components/Footer"
 import "./App.css";
 
 
-const App = () => (
+// const App = () => (
 
-  <Wrapper>
-    <NavBar />
-    <Jumbotron />
-    <Title>Memory Game</Title>
-    <GameBoard />>
-    <Footer />
-  </Wrapper>
+//   <Wrapper>
+//     <NavBar />
+//     <Jumbotron />
+//     <Title />
+//     <GameBoard />
+//     <Footer />
+//   </Wrapper>
 
-)
+// )
+
+class App extends React.Component {
+  state = {
+    status: 'Click on an image to play!',
+    currentScore: 0,
+    highScore: 4
+  }
+
+
+  handleCorrect = () => {
+    this.setState({
+      status: 'Correct Guess!',
+      currentScore: this.state.currentScore + 1
+    })
+    if(this.state.currentScore + 1 > this.state.highScore) {
+      this.setState({ highScore: this.state.currentScore + 1 });
+    }
+  }
+
+  handleGameOver = () => {
+    this.setState({status: 'Wrong Guess. Play Again.'})
+    this.setState({ currentScore: 0});
+
+  }
+
+  render(){
+    return (
+      <Wrapper>
+      <NavBar
+        status={this.state.status}
+        currentScore={this.state.currentScore}
+        highScore={this.state.highScore}
+      />
+      <Jumbotron />
+      <Title />
+      <GameBoard
+        gameOver={this.state.gameOver}
+        wrong={this.handleGameOver}
+        correct={this.handleCorrect}
+      />
+      <Footer />
+    </Wrapper>
+    )
+  }
+}
 
 export default App;

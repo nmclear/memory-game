@@ -3,21 +3,21 @@ import "./gameCard.css";
 
 class GameCard extends React.Component {
   state = {
-    guess: false
+    guessed: this.props.guessed
+    // guessed: false
   }
 
   handleGuess = () => {
-    if(this.state.guess){
-      console.log('Game Over');
-    } else {
-      this.setState({ guess: true })
-    }
+
+    this.props.checkGuess(this.state.guessed)
+    this.setState({ guessed: true })
+
   }
 
   render() {
     return (
       <div className="col-sm-3">
-        <div key={this.props.key} className="card" onClick={this.handleGuess}>
+        <div key={this.props.id} className="card" onClick={this.handleGuess}>
           <div className="img-container">
             <img alt={this.props.name} src={this.props.image} />
           </div>
