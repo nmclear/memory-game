@@ -13,13 +13,20 @@ class GameBoard extends React.Component {
 
   checkGuess = guessed => {
     if(guessed){
-      console.log('gameOver');
       this.props.wrong();
-      // this.setState({ default: false});
     } else {
-      console.log('correct')
       this.props.correct();
+      
+      this.setState({characters: this.shuffleArr(this.state.characters)})
     }
+  }
+
+  shuffleArr = arr => {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
   }
 
 
