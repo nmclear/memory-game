@@ -3,22 +3,10 @@ import "./gameCard.css";
 
 class GameCard extends React.Component {
   state = {
-    // guessed: this.props.guessed
     key: this.props.id
-    // guessed: false
   }
 
-  // handleGuess = () => {
-
-  //   this.props.checkGuess(this.state.guessed)
-  //   this.setState({ guessed: true })
-
-  // }
-
-    handleGuess = () => {
-      // console.log('this.key ' + this.state.key)
-      this.props.handleGuess(this.state.key)
-    }
+  handleGuess = () => this.props.handleGuess(this.state.key);
 
   render() {
     return (
@@ -32,6 +20,5 @@ class GameCard extends React.Component {
     )
   }
 }
-
 
 export default GameCard;

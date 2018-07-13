@@ -8,7 +8,6 @@ class GameBoard extends React.Component {
 
   state = {
     characters,
-    // default: false,
     guessArr: []
   };
 
@@ -52,12 +51,10 @@ class GameBoard extends React.Component {
         <div className="row">
           {this.state.characters.map(character => (
             <GameCard
-              // guessed={this.state.default}
               id={character.id}
               key={character.id}
               name={character.name}
               image={character.image}
-              // checkGuess={this.checkGuess}
               handleGuess={this.handleGuess}
             />
           ))}
@@ -66,6 +63,5 @@ class GameBoard extends React.Component {
     )
   }
 }
-
 
 export default GameBoard;

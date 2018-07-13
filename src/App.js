@@ -8,26 +8,12 @@ import Footer from "./components/Footer"
 import "./App.css";
 
 
-// const App = () => (
-
-//   <Wrapper>
-//     <NavBar />
-//     <Jumbotron />
-//     <Title />
-//     <GameBoard />
-//     <Footer />
-//   </Wrapper>
-
-// )
-
 class App extends React.Component {
   state = {
-    // guessed: false,
     status: 'Click on an image to play!',
     currentScore: 0,
     highScore: 0
   }
-
 
   handleCorrect = () => {
     this.setState({
@@ -56,8 +42,6 @@ class App extends React.Component {
       <Jumbotron />
       <Title />
       <GameBoard
-        // guessed={this.state.guessed}
-        // gameOver={this.state.gameOver}
         wrong={this.handleGameOver}
         correct={this.handleCorrect}
       />
