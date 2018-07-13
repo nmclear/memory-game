@@ -3,7 +3,6 @@ import GameCard from "./../GameCard"
 import characters from "./../../characters.json";
 import "./gameBoard.css";
 
-
 class GameBoard extends React.Component {
 
   state = {
@@ -23,24 +22,23 @@ class GameBoard extends React.Component {
 
     const arr = this.state.guessArr
   
-      for(let i = 0; i < arr.length; i++){
-        if(arr[i] === guess){
-          this.props.wrong();
-          this.setState({guessArr: []})
-          break;
-        } else {
-          this.props.correct();
-          this.setState(prevState => ({ guessArr: [...prevState.guessArr, guess] }))
-          this.setState({characters: this.shuffleArr(this.state.characters)})
-        }
-      }
-
-      if(arr.length === 0){
+    for(let i = 0; i < arr.length; i++){
+      if(arr[i] === guess){
+        this.props.wrong();
+        this.setState({guessArr: []})
+        break;
+      } else {
         this.props.correct();
         this.setState(prevState => ({ guessArr: [...prevState.guessArr, guess] }))
         this.setState({characters: this.shuffleArr(this.state.characters)})
       }
-    
+    }
+
+    if(arr.length === 0){
+      this.props.correct();
+      this.setState(prevState => ({ guessArr: [...prevState.guessArr, guess] }))
+      this.setState({characters: this.shuffleArr(this.state.characters)})
+    }
   }
 
   render(){

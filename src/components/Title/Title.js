@@ -1,6 +1,6 @@
 import React from "react";
 import "./Title.css";
 
-const Title = props => <h1 className="title">Memory Game</h1>;
+const Title = props => <h1 className="title">Click on an image to earn points, but don't click on any more than once!</h1>;
 
 export default Title;

@@ -1,8 +1,8 @@
 .nav {
     position: fixed;
-    background-color: black;
+    background: url("https://img00.deviantart.net/405b/i/2009/268/7/3/mario_hat_by_tigerhawk01.jpg");
     color: white;
     width: 100%;
-    height: 90px;
-    margin-bottom: 20px;
+    height: 80px;
+    margin-bottom: 0px;
 }

@@ -1,7 +1,17 @@
 .board {
-  width: 60%;
+  width: 100%;
   margin-bottom: 45px;
-  padding-bottom: 45px;
+  margin: 0px;
+
+  background: url("http://thefreecheese.com/wp-content/uploads/2017/05/mario-kart-rainbow-road-n64.jpg");
+  background: url("https://i.imgur.com/pnWgiuD.jpg");
+  /* background: url("https://img4.wikia.nocookie.net/__cb20140501002526/mariokart/images/archive/5/50/20140712193017%21Wiki-background"); */
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+
+  padding: 25px 20%;
 }
 
 

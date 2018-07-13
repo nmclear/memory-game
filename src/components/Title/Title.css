@@ -3,8 +3,15 @@
   height: 100px;
   line-height: 100px;
   text-align: center;
-  font-size: 3rem;
+  font-size: 40px;
   color: white;
-  background: #2A77AE;
+  background: url("https://img00.deviantart.net/405b/i/2009/268/7/3/mario_hat_by_tigerhawk01.jpg");
   margin-bottom: 50px;
+  margin: 0px;
+  /* padding-top: 200px; */
+
+
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
 }

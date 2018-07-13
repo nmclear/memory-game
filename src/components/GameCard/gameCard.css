@@ -2,23 +2,35 @@
   background: #fff;
   background-position: 50%;
   border-radius: 4px;
-  height: 170px;
+  height: 185px;
   margin: 10px 25px;
   position: relative;
-  width: 170px;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  width: 185px;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   text-align: left;
   cursor: pointer;
+  display: inline-block;
 }
+
+
 
 .card > .img-container {
   height: 100%;
+  line-height: 100%;
   overflow: hidden;
   text-align: center;
-  background:#6CADDC;
+  background:url("https://images.homedepot-static.com/productImages/c17ccde8-8de1-4b73-8fe4-7d8a57158ceb/svn/checkeredflag-wilsonart-laminate-sheets-y0228603724896-64_1000.jpg");
+  background-size: auto;
 }
 .card > .img-container > img {
-  width: 80%
+  width: 95%;  
+}
+
+.card:hover
+{
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
 }
 
 
