@@ -22,9 +22,10 @@ import "./App.css";
 
 class App extends React.Component {
   state = {
+    // guessed: false,
     status: 'Click on an image to play!',
     currentScore: 0,
-    highScore: 4
+    highScore: 0
   }
 
 
@@ -40,7 +41,7 @@ class App extends React.Component {
 
   handleGameOver = () => {
     this.setState({status: 'Wrong Guess. Play Again.'})
-    this.setState({ currentScore: 0});
+    this.setState({ currentScore: 0 });
 
   }
 
@@ -55,7 +56,8 @@ class App extends React.Component {
       <Jumbotron />
       <Title />
       <GameBoard
-        gameOver={this.state.gameOver}
+        // guessed={this.state.guessed}
+        // gameOver={this.state.gameOver}
         wrong={this.handleGameOver}
         correct={this.handleCorrect}
       />
