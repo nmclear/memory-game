@@ -26,7 +26,7 @@ class App extends React.Component {
   }
 
   handleGameOver = () => {
-    this.setState({status: 'Wrong Guess. Play Again.'})
+    this.setState({status: 'Wrong Guess. Play Again!'})
     this.setState({ currentScore: 0 });
 
   }

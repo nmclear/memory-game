@@ -10,7 +10,6 @@ class GameBoard extends React.Component {
     characters,
     guessArr: []
   };
-
  
   shuffleArr = arr => {
     for (let i = arr.length - 1; i > 0; i--) {
@@ -43,7 +42,6 @@ class GameBoard extends React.Component {
       }
     
   }
-
 
   render(){
     return(
